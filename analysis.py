@@ -1,12 +1,8 @@
 from transformers import pipeline
-
-# Load a sentiment analysis pipeline
-classifier = pipeline("sentiment-analysis")
-
-# Try it out
-print(classifier("I love Hugging Face!"))
-
 import gradio as gr
+
+
+classifier = pipeline("sentiment-analysis")
 
 def classify_sentiment(text):
     result = classifier(text)[0]
